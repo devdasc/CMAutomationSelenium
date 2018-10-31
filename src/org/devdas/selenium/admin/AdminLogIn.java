@@ -10,10 +10,8 @@ public class AdminLogIn {
 		String driverKey="webdriver.chrome.driver";
 		String driverPath="C:\\Users\\devda\\Documents\\Udemy\\Selenium\\chromedriver_win32\\chromedriver.exe";
 		
-		System.setProperty(driverKey, driverPath);
-		
-		WebDriver driver=new ChromeDriver();
-		
+		System.setProperty(driverKey, driverPath);		
+		WebDriver driver=new ChromeDriver();		
 		//login to cmautomation 		
 		driver.get("http://localhost:8090/cmautomation/showLoginPage");
 		driver.findElement(By.id("username")).sendKeys("md");

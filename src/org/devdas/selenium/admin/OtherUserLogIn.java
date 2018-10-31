@@ -18,7 +18,7 @@ public class OtherUserLogIn {
 		driver.findElement(By.name("password")).sendKeys("test123");
 		driver.findElement(By.xpath("//*[@id=\"command\"]/div[4]/div/button")).click();
 
-		waitDriver();
+		waitDriver(3000);
 		// to logout
 		driver.findElement(By.xpath("/html/body/nav/div/ul[2]/li[3]/a")).click();
 
@@ -28,7 +28,7 @@ public class OtherUserLogIn {
 		driver.findElement(By.name("password")).sendKeys("test123");
 		driver.findElement(By.xpath("//*[@id=\"command\"]/div[4]/div/button")).click();
 
-		waitDriver();
+		waitDriver(3000);
 		// to logout
 		driver.findElement(By.xpath("/html/body/nav/div/ul[2]/li[3]/a")).click();
 
@@ -38,14 +38,13 @@ public class OtherUserLogIn {
 		driver.findElement(By.name("password")).sendKeys("test123");
 		driver.findElement(By.xpath("//*[@id=\"command\"]/div[4]/div/button")).click();
 
-		waitDriver();
+		waitDriver(3000);
 		// to logout
 		driver.findElement(By.xpath("/html/body/nav/div/ul[2]/li[3]/a")).click();
 	}
-
-	private static void waitDriver() {
+	private static void waitDriver(int time) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(time);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
