@@ -8,10 +8,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+/*--------Done--------------*/
 /* This scripts updates an existing environment to the system 
  in response to requirement of issue #34 */
-public class AdminUpdateExistingEnvironment {
+public class AdminCanDelEnvWhichIsNotAttachedToAnyApplication {
 
 	public static void main(String[] args) {
 		String driverKey = "webdriver.chrome.driver";
@@ -31,19 +31,11 @@ public class AdminUpdateExistingEnvironment {
 		waitDriver(4000);
 		// To Click Environment link
 		driver.findElement(By.id("lnkEnvironments")).click();
-		waitDriver(4000);
-		// To Click update link button
-		driver.findElement(By.xpath("(//a[contains(text(),'Update')])[last()]")).click();
+		waitDriver(3000);
+		// To Click delete link button
+		driver.findElement(By.xpath("(//a[contains(text(),'Delete')])[last()]")).click();
 		waitDriver(2000);
-		// To fill Add Environment form
-		driver.findElement(By.id("environmentName")).clear();
-		driver.findElement(By.id("environmentName")).sendKeys("Updated Env");
-		driver.findElement(By.id("description")).clear();
-		driver.findElement(By.id("description")).sendKeys("Updated Description");
-
-		// Click the Save button
-		waitDriver(2000);
-		driver.findElement(By.xpath("//input[@value='Save']")).click();
+		driver.switchTo().alert().accept();
 		waitDriver(2000);
 		driver.close();
 	}

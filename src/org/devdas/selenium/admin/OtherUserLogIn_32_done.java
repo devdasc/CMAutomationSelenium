@@ -3,10 +3,11 @@ package org.devdas.selenium.admin;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-public class OtherUserLogIn {
+/*--------------------Done------------#32--------*/
+public class OtherUserLogIn_32_done {
 
 	public static void main(String[] args) {
+		//instantiate the driver
 		String driverKey = "webdriver.chrome.driver";
 		String driverPath = "C:\\Users\\devda\\Documents\\Udemy\\Selenium\\chromedriver_win32\\chromedriver.exe";
 		System.setProperty(driverKey, driverPath);

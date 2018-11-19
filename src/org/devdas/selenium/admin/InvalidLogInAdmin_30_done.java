@@ -3,8 +3,8 @@ package org.devdas.selenium.admin;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-public class InvalidLogInAdmin {
+/*--------------------Done------------#30--------*/
+public class InvalidLogInAdmin_30_done {
 
 	public static void main(String[] args) {
 		String driverKey="webdriver.chrome.driver";
