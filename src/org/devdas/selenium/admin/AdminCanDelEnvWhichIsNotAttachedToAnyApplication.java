@@ -9,8 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 /*--------Done--------------*/
-/* This scripts updates an existing environment to the system 
- in response to requirement of issue #34 */
+
 public class AdminCanDelEnvWhichIsNotAttachedToAnyApplication {
 
 	public static void main(String[] args) {
