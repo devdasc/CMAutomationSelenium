@@ -30,6 +30,8 @@ public class AdminCanUpdateAnExistingVendor_54_done extends Login {
 		
 		// to click save button
 		clickSaveButton();
+		//logout
+		getLogout();
 
 		// close the driver
 		closeBrowser();

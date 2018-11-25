@@ -2,7 +2,7 @@ package org.devdas.selenium.cma;
 
 import org.devdas.selenium.tutorial.Login;
 
-public class CMACanCreateNewDefectByProvidingAllRequiredInformation_61 extends Login{
+public class CMACanAcessTheDefectFixDetailUI_afterLoginWithCredential_60_done extends Login {
 
 	public static void main(String[] args) {
 		// instantiate the browser
@@ -13,15 +13,12 @@ public class CMACanCreateNewDefectByProvidingAllRequiredInformation_61 extends L
 		getManageDefects();
 		// click defect detail link
 		clickDefectDetailLink();
-		// fill in the defect fix detail form to create a new defect
-		fillDefectFixDetailForm();
-		// to click save button
-		clickSaveButton();
 		// logout
-		/*getLogout();
+		getLogout();
+
 		// close the driver
 		closeBrowser();
-*/
+
 	}
 
 }
