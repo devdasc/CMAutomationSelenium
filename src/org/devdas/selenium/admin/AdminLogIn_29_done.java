@@ -16,6 +16,11 @@ public class AdminLogIn_29_done  extends Login{
 		//get logged out
 		getLogout();
 		
+		//close the browser
+		closeBrowser();
+		
+	
+		
 		
 	}
 

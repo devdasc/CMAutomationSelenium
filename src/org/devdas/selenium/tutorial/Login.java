@@ -4,12 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login {
 	private static String driverKey = "webdriver.chrome.driver";
-	private static String driverPath = "C:\\Users\\devda\\Documents\\Udemy\\Selenium\\chromedriver_win32\\chromedriver.exe";
+	private static String driverPath = "C:\\Users\\devda\\Documents\\Udemy\\Selenium\\chromedriver.exe";
+	//private static String driverKey="webdriver.gecko.driver";
+	//private static String driverPath="C:\\Users\\devda\\Documents\\Udemy\\Selenium\\geckodriver-v0.23.0-win64\\geckodriver.exe";
 	protected static WebDriver driver;
 	private static Select dropdown;
 	private static Actions act;
@@ -31,11 +35,14 @@ public class Login {
 	public static void getLogin(String userName, String password) {
 		act = new Actions(driver);
 		// login to cmautomation as CMA------------------>
+		//waitDriver(3000);
 		driver.get("http://localhost:8090/cmautomation/showLoginPage");
-		// for mouse hover action
+		//driver.get("http://localhost:8080/Defect-Tracker/showLoginPage");
+		//driver.get("https://www.facebook.com/");
 		// fill in username & password for admin
-		driver.findElement(By.id("username")).sendKeys(userName);
-		driver.findElement(By.name("password")).sendKeys(password);
+		//waitDriver(5000);
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys(userName);
+		driver.findElement(By.xpath("//input[@placeholder='password']")).sendKeys(password);
 		// move to Login button
 		WebElement ele = driver.findElement(By.xpath("//*[@id=\"command\"]/div[4]/div/button"));
 		act.moveToElement(ele).build().perform();
@@ -43,6 +50,7 @@ public class Login {
 		// click onto the button
 		ele.click();
 		waitDriver(2000);
+		
 	}
 
 	public static void getLogout() {
