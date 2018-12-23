@@ -14,10 +14,10 @@ public class AdminLogIn_29_done  extends Login{
 		getLogin(ADMIN, PASSWORD);
 		
 		//get logged out
-		getLogout();
+		//getLogout();
 		
 		//close the browser
-		closeBrowser();
+		//closeBrowser();
 		
 	
 		

@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.NoSuchElementException;
 
 public class Login {
 	private static String driverKey = "webdriver.chrome.driver";
@@ -36,12 +37,12 @@ public class Login {
 		act = new Actions(driver);
 		// login to cmautomation as CMA------------------>
 		//waitDriver(3000);
-		driver.get("http://localhost:8090/cmautomation/showLoginPage");
-		//driver.get("http://localhost:8080/Defect-Tracker/showLoginPage");
+		//driver.get("http://localhost:8090/cmautomation/showLoginPage");
+		driver.get("http://localhost:8080/Defect-Tracker/showLoginPage");
 		//driver.get("https://www.facebook.com/");
 		// fill in username & password for admin
 		//waitDriver(5000);
-		driver.findElement(By.xpath("//input[@id='username']")).sendKeys(userName);
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys(userName+"1");
 		driver.findElement(By.xpath("//input[@placeholder='password']")).sendKeys(password);
 		// move to Login button
 		WebElement ele = driver.findElement(By.xpath("//*[@id=\"command\"]/div[4]/div/button"));
